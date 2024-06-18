@@ -6,7 +6,6 @@ import Board from './components/Board';
 function App() {
   const[taskList, setTaskList] = useState([])
 
-  console.log(taskList)
 
   return (
     <div className="App">

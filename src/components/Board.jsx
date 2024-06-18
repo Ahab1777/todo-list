@@ -2,11 +2,12 @@
 
 const Board = ({todo, index, taskList, setTaskList}) => {
 
-    // tenho que entender por que que precisa de indexOf achar o item ao invés de só usar o index diretamente
     const deleteTask = () => {
-        console.log(`Index = ${index}`)
-        setTaskList(taskList.splice(index,1))
-        console.log(taskList)
+
+        const newTaskList = [...taskList]; // Create a new array to avoid mutation
+        newTaskList.splice(index, 1); // Remove the task from the new array
+        setTaskList(newTaskList); // Update the state with the new array
+       
     }
 
     return(
